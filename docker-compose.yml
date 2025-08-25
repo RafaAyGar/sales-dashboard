@@ -17,13 +17,13 @@ services:
       - vol-sales-dashboard:/var/lib/postgresql/data
       - ./database:/docker-entrypoint-initdb.d
 
-  datahandler:
+  salesmanager:
     build:
       context: .
-      dockerfile: Dockerfile.datahandler
+      dockerfile: Dockerfile.salesmanager
     env_file:
       - .env
-    container_name: sales-datahandler
+    container_name: sales-salesmanager
     depends_on:
       db:
         condition: service_healthy
