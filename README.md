@@ -35,7 +35,13 @@ These four modules interact in real time. The Sales Manager periodically inserts
 <br>
 
 :arrow_forward: Deployment
+Fast build up and run the project:
 ```
 docker-compose up -d --build
 ```
+Access the dashboard: From the host machine, go to:
+```
+http://localhost:8501/
+```
+
 
