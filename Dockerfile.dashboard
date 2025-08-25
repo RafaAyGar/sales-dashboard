@@ -1,0 +1,10 @@
+FROM python:3.12
+WORKDIR /app
+
+COPY ./dashboard .
+RUN pip install --no-cache-dir -r ./requirements.txt
+
+EXPOSE 8000
+
+CMD ["python", "-u", "-m", "streamlit", "run", "./dashboard.py", "--server.port=8000", "--server.address=0.0.0.0", "--server.headless=true"]
+

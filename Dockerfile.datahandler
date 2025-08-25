@@ -1,0 +1,19 @@
+FROM python:3.12
+
+WORKDIR /app
+
+# RUN apt-get update && apt-get install -y cron && rm -rf /var/lib/apt/lists/*
+
+COPY ./datahandler .
+
+RUN pip install --no-cache-dir -r ./requirements.txt
+
+# Program cron to run every minute (just for testing purposes)
+# RUN printenv | grep -v "no_proxy" > /etc/container_env.sh
+# RUN echo "* * * * * /bin/bash -c \"source /etc/container_env.sh && /usr/local/bin/python3 /app/data_load_postgres_recurrent.py >> /var/log/cron.log 2>&1\"" > /etc/cron.d/data-load-postgres-recurrent
+# RUN echo "* * * * * /bin/bash /app/data_load_postgres_recurrent.sh >> /var/log/cron.log 2>&1" > /etc/cron.d/data-load-postgres-recurrent
+
+# RUN chmod 0644 /etc/cron.d/data-load-postgres-recurrent
+# RUN crontab /etc/cron.d/data-load-postgres-recurrent
+
+ENTRYPOINT ["./_entrypoint.sh"]
