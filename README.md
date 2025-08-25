@@ -2,9 +2,12 @@
 
 A full-stack data analytics project that integrates data processing, predictive modeling, and interactive visualization. Historical sales data is cleaned and stored in a database, analyzed for trends, and used to train a simple predictive model (ARIMA) to forecast future sales. An interactive dashboard built with Streamlit and Plotly displays key insights, trends, and forecasts, and can be deployed to the cloud for public access.
 
+<br>
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/RafaAyGar/sales-dashboard/main/docs/scheme-project-sales-dashboard.png" width="50%" alt="Project scheme" /></a>
 </p>
+<br>
 
 :computer: Tech Stack:
 
@@ -35,3 +38,4 @@ These four modules interact in real time. The Sales Manager periodically inserts
 ```
 docker-compose up -d --build
 ```
+
