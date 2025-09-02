@@ -2,6 +2,8 @@
 
 A full-stack data analytics project that integrates data processing, predictive modeling, and interactive visualization using independent and encapsulated docker services developed from scratch. Historical sales data is cleaned and stored in a database, analyzed for trends, and used to train a simple predictive model (ARIMA) to forecast future sales. An interactive dashboard built with Streamlit and Plotly displays key insights, trends, and forecasts, and can be deployed to the cloud for public access.
 
+A online running version of this project is available at https://www.rayllon-ai.com/portfolio-projects/sales-dashboard/.
+
 <br>
 
 <p align="center">
@@ -43,6 +45,7 @@ Access the dashboard: From the host machine, go to:
 ```
 http://localhost:8501/
 ```
+
 
 
 
